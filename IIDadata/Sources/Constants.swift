@@ -21,6 +21,7 @@ public enum AddressQueryType: String {
     case address = "suggest/address"
     case fiasOnly = "suggest/fias"
     case findByID = "findById/address"
+    case postalUnit = "suggest/postal_unit"
 }
 
 ///Language of response.

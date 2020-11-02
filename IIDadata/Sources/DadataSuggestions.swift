@@ -241,6 +241,10 @@ public class DadataSuggestions {
         suggestAddress(AddressSuggestionQuery(query, ofType: .fiasOnly), completion: completion)
     }
     
+    public func suggestAddress(by postalCode: String, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>) -> Void){
+        suggestAddress(AddressSuggestionQuery(postalCode, ofType: .postalUnit), completion: completion)
+    }
+    
     ///Basic address suggestions request takes KLADR or FIAS ID as a query parameter to lookup additional data.
     ///
     ///- Parameter query: KLADR or FIAS ID.
